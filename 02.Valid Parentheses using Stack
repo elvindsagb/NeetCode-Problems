@@ -1,0 +1,30 @@
+Given a string containing '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+
+Example:
+Input: "()[]{}"
+Output: True
+
+-------------------------------------------------------------------------------------------------------------------------
+
+def isValid(s):
+    stack = []
+    mapping = {')': '(', '}': '{', ']': '['}
+
+    for char in s:
+        if char in mapping:
+            top = stack.pop() if stack else '#'
+            if mapping[char] != top:
+                return False
+        else:
+            stack.append(char)
+
+    return not stack
+
+
+# ===== MAIN PROGRAM =====
+s = input("Enter parentheses string: ")
+
+if isValid(s):
+    print("Valid")
+else:
+    print("Invalid")
