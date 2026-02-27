@@ -1,0 +1,59 @@
+Problem:
+Reverse a singly linked list.
+
+🧠 Explanation:
+
+Use 3 pointers:
+
+prev
+
+current
+
+next_node
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+class ListNode:
+    def __init__(self, val=0):
+        self.val = val
+        self.next = None
+
+
+def reverseList(head):
+    prev = None
+    current = head
+
+    while current:
+        next_node = current.next
+        current.next = prev
+        prev = current
+        current = next_node
+
+    return prev
+
+
+def printList(head):
+    while head:
+        print(head.val, end=" -> ")
+        head = head.next
+    print("None")
+
+
+# ===== MAIN PROGRAM =====
+values = list(map(int, input("Enter linked list values: ").split()))
+
+# Create linked list
+head = None
+for value in reversed(values):
+    node = ListNode(value)
+    node.next = head
+    head = node
+
+print("Original List:")
+printList(head)
+
+# Reverse
+head = reverseList(head)
+
+print("Reversed List:")
+printList(head)
