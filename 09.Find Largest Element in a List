@@ -1,0 +1,22 @@
+Example:
+
+Input: 3 7 2 9 1
+Output: 9
+
+---------------------------------------------------------------------------------------------------------------------
+
+def findLargest(nums):
+    largest = nums[0]
+    for num in nums:
+        if num > largest:
+            largest = num
+    return largest
+
+
+# ===== MAIN PROGRAM =====
+nums = list(map(int, input("Enter numbers: ").split()))
+
+if nums:
+    print("Largest element:", findLargest(nums))
+else:
+    print("List is empty")
