@@ -1,0 +1,21 @@
+Example:
+
+Input: hello
+Output: 2
+
+------------------------------------------------------------------------------------------
+
+def countVowels(s):
+    vowels = "aeiouAEIOU"
+    count = 0
+
+    for char in s:
+        if char in vowels:
+            count += 1
+
+    return count
+
+
+# ===== MAIN PROGRAM =====
+text = input("Enter a string: ")
+print("Number of vowels:", countVowels(text))
