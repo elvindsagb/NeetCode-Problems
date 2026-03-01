@@ -1,0 +1,33 @@
+Example
+
+Input: 10 20 4 45 99
+Output: 45
+
+
+-------------------------------------------------------------------------------------------------------
+
+def secondLargest(nums):
+    if len(nums) < 2:
+        return None
+
+    first = second = float('-inf')
+
+    for num in nums:
+        if num > first:
+            second = first
+            first = num
+        elif num > second and num != first:
+            second = num
+
+    return second
+
+
+# ===== MAIN PROGRAM =====
+nums = list(map(int, input("Enter numbers: ").split()))
+
+result = secondLargest(nums)
+
+if result is None:
+    print("Not enough unique elements")
+else:
+    print("Second largest element:", result)
