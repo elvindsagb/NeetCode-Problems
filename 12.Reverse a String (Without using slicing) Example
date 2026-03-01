@@ -1,0 +1,17 @@
+Input: hello
+Output: olleh
+
+----------------------------------------------------------------------------------------
+
+def reverseString(s):
+    reversed_str = ""
+    
+    for char in s:
+        reversed_str = char + reversed_str
+    
+    return reversed_str
+
+
+# ===== MAIN PROGRAM =====
+text = input("Enter a string: ")
+print("Reversed string:", reverseString(text))
