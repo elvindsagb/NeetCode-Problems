@@ -1,0 +1,27 @@
+(Armstrong number = sum of digits^number_of_digits equals original number)
+
+Example
+
+Input: 153
+Output: Armstrong Number
+
+----------------------------------------------------------------------------------------------------------------
+
+def isArmstrong(num):
+    digits = str(num)
+    power = len(digits)
+    total = 0
+
+    for digit in digits:
+        total += int(digit) ** power
+
+    return total == num
+
+
+# ===== MAIN PROGRAM =====
+num = int(input("Enter a number: "))
+
+if isArmstrong(num):
+    print("Armstrong Number")
+else:
+    print("Not an Armstrong Number")
