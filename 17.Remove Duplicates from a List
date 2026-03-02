@@ -1,0 +1,23 @@
+Example
+
+Input: 1 2 2 3 4 4 5
+Output: 1 2 3 4 5
+
+------------------------------------------------------------------------------------------------------
+
+def removeDuplicates(nums):
+    unique = []
+    
+    for num in nums:
+        if num not in unique:
+            unique.append(num)
+    
+    return unique
+
+
+# ===== MAIN PROGRAM =====
+nums = list(map(int, input("Enter numbers: ").split()))
+
+result = removeDuplicates(nums)
+
+print("After removing duplicates:", result)
