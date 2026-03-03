@@ -1,0 +1,23 @@
+(LCM = Least Common Multiple)
+
+Example
+
+Input: 12 15
+Output: 60
+
+-------------------------------------------------------------------------------------------------------------
+
+def findGCD(a, b):
+    while b:
+        a, b = b, a % b
+    return a
+
+def findLCM(a, b):
+    return (a * b) // findGCD(a, b)
+
+
+# ===== MAIN PROGRAM =====
+num1 = int(input("Enter first number: "))
+num2 = int(input("Enter second number: "))
+
+print("LCM:", findLCM(num1, num2))
