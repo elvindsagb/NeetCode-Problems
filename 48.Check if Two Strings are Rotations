@@ -1,0 +1,23 @@
+Example:
+Input:
+abcde
+cdeab
+Output: Yes
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+def areRotations(s1, s2):
+    if len(s1) != len(s2):
+        return False
+    
+    return s2 in (s1 + s1)
+
+
+# ===== MAIN PROGRAM =====
+str1 = input("Enter first string: ")
+str2 = input("Enter second string: ")
+
+if areRotations(str1, str2):
+    print("Strings are rotations")
+else:
+    print("Strings are not rotations")
