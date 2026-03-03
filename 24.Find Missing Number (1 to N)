@@ -1,0 +1,17 @@
+Example:
+Input: 1 2 4 5
+Output: 3
+
+------------------------------------------------------------------------------------------------------------------------------
+
+def findMissing(nums):
+    n = len(nums) + 1
+    total_sum = n * (n + 1) // 2
+    actual_sum = sum(nums)
+    return total_sum - actual_sum
+
+
+# ===== MAIN PROGRAM =====
+nums = list(map(int, input("Enter numbers from 1 to N with one missing: ").split()))
+
+print("Missing number:", findMissing(nums))
