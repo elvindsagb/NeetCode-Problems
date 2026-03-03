@@ -1,0 +1,25 @@
+Example
+
+Input: 0 1 0 3 12
+Output: 1 3 12 0 0
+
+-----------------------------------------------------------------------------------------------------------------
+
+def moveZeros(nums):
+    result = []
+    zero_count = 0
+
+    for num in nums:
+        if num == 0:
+            zero_count += 1
+        else:
+            result.append(num)
+
+    result.extend([0] * zero_count)
+    return result
+
+
+# ===== MAIN PROGRAM =====
+nums = list(map(int, input("Enter numbers: ").split()))
+
+print("After moving zeros:", moveZeros(nums))
