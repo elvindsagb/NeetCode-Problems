@@ -1,0 +1,31 @@
+Example
+
+Input: swiss
+Output: w
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+def firstNonRepeatingChar(s):
+    freq = {}
+
+    # Count frequency
+    for char in s:
+        freq[char] = freq.get(char, 0) + 1
+
+    # Find first char with frequency 1
+    for char in s:
+        if freq[char] == 1:
+            return char
+
+    return None
+
+
+# ===== MAIN PROGRAM =====
+text = input("Enter a string: ")
+
+result = firstNonRepeatingChar(text)
+
+if result:
+    print("First non-repeating character:", result)
+else:
+    print("No non-repeating character found")
