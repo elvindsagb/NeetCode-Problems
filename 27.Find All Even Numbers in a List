@@ -1,0 +1,22 @@
+Example:
+Input: 1 2 3 4 5 6
+Output: 2 4 6
+
+--------------------------------------------------------------------------------------------------------
+
+def findEvenNumbers(nums):
+    even_list = []
+    
+    for num in nums:
+        if num % 2 == 0:
+            even_list.append(num)
+    
+    return even_list
+
+
+# ===== MAIN PROGRAM =====
+nums = list(map(int, input("Enter numbers: ").split()))
+
+result = findEvenNumbers(nums)
+
+print("Even numbers:", result)
