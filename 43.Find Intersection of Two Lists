@@ -1,0 +1,25 @@
+Example
+
+Input:
+List1: 1 2 3 4
+List2: 3 4 5 6
+Output: 3 4
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+def findIntersection(list1, list2):
+    intersection = []
+
+    for num in list1:
+        if num in list2 and num not in intersection:
+            intersection.append(num)
+
+    return intersection
+
+
+# ===== MAIN PROGRAM =====
+list1 = list(map(int, input("Enter first list: ").split()))
+list2 = list(map(int, input("Enter second list: ").split()))
+
+result = findIntersection(list1, list2)
+print("Intersection:", result)
