@@ -1,0 +1,21 @@
+Example
+
+Input:
+Main string: hello world
+Substring: world
+Output: Substring found
+
+-------------------------------------------------------------------------------------------------------
+
+def isSubstring(main_str, sub_str):
+    return sub_str in main_str
+
+
+# ===== MAIN PROGRAM =====
+main_string = input("Enter main string: ")
+sub_string = input("Enter substring: ")
+
+if isSubstring(main_string, sub_string):
+    print("Substring found")
+else:
+    print("Substring not found")
