@@ -1,0 +1,21 @@
+Example
+
+Input: I love programming in Python
+Output: programming
+
+-------------------------------------------------------------------------------------------------------------------
+
+def largestWord(sentence):
+    words = sentence.split()
+    largest = ""
+
+    for word in words:
+        if len(word) > len(largest):
+            largest = word
+
+    return largest
+
+
+# ===== MAIN PROGRAM =====
+sentence = input("Enter a sentence: ")
+print("Largest word:", largestWord(sentence))
