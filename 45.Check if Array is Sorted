@@ -1,0 +1,14 @@
+def isSorted(nums):
+    for i in range(len(nums) - 1):
+        if nums[i] > nums[i + 1]:
+            return False
+    return True
+
+
+# ===== MAIN PROGRAM =====
+nums = list(map(int, input("Enter numbers: ").split()))
+
+if isSorted(nums):
+    print("Array is sorted")
+else:
+    print("Array is not sorted")
