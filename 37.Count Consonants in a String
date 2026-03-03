@@ -1,0 +1,23 @@
+Example
+
+Input: hello
+Output: 3
+
+---------------------------------------------------------------------------------------------------------------------
+
+def countConsonants(s):
+    vowels = "aeiouAEIOU"
+    count = 0
+
+    for char in s:
+        if char.isalpha() and char not in vowels:
+            count += 1
+
+    return count
+
+
+# ===== MAIN PROGRAM =====
+text = input("Enter a string: ")
+print("Number of consonants:", countConsonants(text))
+
+---------------------------------------------------------------------------------------------------------------------
