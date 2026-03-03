@@ -1,0 +1,22 @@
+Example:
+Input list: 1 2 3 2 2 4
+Search: 2
+Output: 3
+
+------------------------------------------------------------------------------------------------------------------
+
+def countOccurrences(nums, target):
+    count = 0
+    
+    for num in nums:
+        if num == target:
+            count += 1
+    
+    return count
+
+
+# ===== MAIN PROGRAM =====
+nums = list(map(int, input("Enter numbers: ").split()))
+target = int(input("Enter number to count: "))
+
+print("Occurrences:", countOccurrences(nums, target))
