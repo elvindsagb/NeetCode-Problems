@@ -1,0 +1,25 @@
+def findMinMax(nums):
+    if not nums:
+        return None, None
+
+    minimum = maximum = nums[0]
+
+    for num in nums:
+        if num < minimum:
+            minimum = num
+        if num > maximum:
+            maximum = num
+
+    return minimum, maximum
+
+
+# ===== MAIN PROGRAM =====
+nums = list(map(int, input("Enter numbers: ").split()))
+
+min_val, max_val = findMinMax(nums)
+
+if min_val is None:
+    print("List is empty")
+else:
+    print("Minimum:", min_val)
+    print("Maximum:", max_val)
