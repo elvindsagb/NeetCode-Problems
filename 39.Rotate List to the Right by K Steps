@@ -1,0 +1,20 @@
+Example
+
+Input: 1 2 3 4 5
+K = 2
+Output: 4 5 1 2 3
+
+----------------------------------------------------------------------------------------------------------------------------
+
+def rotateRight(nums, k):
+    n = len(nums)
+    k = k % n
+    return nums[-k:] + nums[:-k]
+
+
+# ===== MAIN PROGRAM =====
+nums = list(map(int, input("Enter numbers: ").split()))
+k = int(input("Enter rotation steps: "))
+
+result = rotateRight(nums, k)
+print("Rotated list:", result)
