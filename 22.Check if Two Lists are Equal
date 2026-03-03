@@ -1,0 +1,21 @@
+Example
+
+Input:
+List1: 1 2 3
+List2: 1 2 3
+Output: Lists are equal
+
+----------------------------------------------------------------------------------------------------------------------------
+
+def areListsEqual(list1, list2):
+    return list1 == list2
+
+
+# ===== MAIN PROGRAM =====
+list1 = list(map(int, input("Enter first list: ").split()))
+list2 = list(map(int, input("Enter second list: ").split()))
+
+if areListsEqual(list1, list2):
+    print("Lists are equal")
+else:
+    print("Lists are not equal")
