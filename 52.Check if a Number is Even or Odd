@@ -1,0 +1,20 @@
+Example
+
+Input: 7
+Output: Odd Number
+
+----------------------------------------------------------------------------
+
+def checkEvenOdd(n):
+    if n % 2 == 0:
+        return "Even Number"
+    else:
+        return "Odd Number"
+
+
+# ===== MAIN PROGRAM =====
+num = int(input("Enter a number: "))
+
+result = checkEvenOdd(num)
+
+print(result)
