@@ -1,0 +1,28 @@
+Example
+
+Input: 1 2 3 2 4 5 1
+Output: 1 2
+
+--------------------------------------------------------------------------------
+
+def findDuplicates(nums):
+    seen = set()
+    duplicates = set()
+    for num in nums:
+        if num in seen:
+            duplicates.add(num)
+        else:
+            seen.add(num)
+
+    return list(duplicates)
+
+
+# ===== MAIN PROGRAM =====
+nums = list(map(int, input("Enter numbers: ").split()))
+
+result = findDuplicates(nums)
+
+if result:
+    print("Duplicate elements:", result)
+else:
+    print("No duplicates found")
