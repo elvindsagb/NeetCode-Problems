@@ -1,0 +1,23 @@
+Example
+
+Input: 12345
+Output: 5
+
+
+-------------------------------------------------------------------------------------
+
+
+def countDigits(n):
+    count = 0
+
+    while n > 0:
+        n = n // 10
+        count += 1
+
+    return count
+
+
+# ===== MAIN PROGRAM =====
+num = int(input("Enter a number: "))
+
+print("Number of digits:", countDigits(num))
