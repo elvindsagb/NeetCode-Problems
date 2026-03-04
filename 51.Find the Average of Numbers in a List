@@ -1,0 +1,19 @@
+Example
+
+Input: 10 20 30 40
+Output: 25
+
+----------------------------------------------------------------------------------------------
+
+def findAverage(nums):
+    if len(nums) == 0:
+        return 0
+    return sum(nums) / len(nums)
+
+
+# ===== MAIN PROGRAM =====
+nums = list(map(int, input("Enter numbers: ").split()))
+
+avg = findAverage(nums)
+
+print("Average:", avg)
