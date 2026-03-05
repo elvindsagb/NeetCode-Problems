@@ -1,0 +1,20 @@
+Example
+
+Input: Python
+Output: 6
+
+-----------------------------------------------------------------------------------------------------
+
+def findLength(s):
+    count = 0
+
+    for char in s:
+        count += 1
+
+    return count
+
+
+# ===== MAIN PROGRAM =====
+text = input("Enter a string: ")
+
+print("Length of string:", findLength(text))
