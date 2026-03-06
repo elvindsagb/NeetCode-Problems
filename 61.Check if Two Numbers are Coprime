@@ -1,0 +1,23 @@
+(Two numbers are coprime if their GCD = 1)
+
+Example
+
+Input: 8 15
+Output: Coprime
+
+---------------------------------------------------------------------------------------------------------------------
+
+def gcd(a, b):
+    while b != 0:
+        a, b = b, a % b
+    return a
+
+
+# ===== MAIN PROGRAM =====
+num1 = int(input("Enter first number: "))
+num2 = int(input("Enter second number: "))
+
+if gcd(num1, num2) == 1:
+    print("Numbers are Coprime")
+else:
+    print("Numbers are not Coprime")
