@@ -1,0 +1,21 @@
+Example
+
+Input: 8 3 10 2 5
+Output: 2
+
+------------------------------------------------------------------------------------
+
+def findSmallest(nums):
+    smallest = nums[0]
+
+    for num in nums:
+        if num < smallest:
+            smallest = num
+
+    return smallest
+
+
+# ===== MAIN PROGRAM =====
+nums = list(map(int, input("Enter numbers: ").split()))
+
+print("Smallest element:", findSmallest(nums))
