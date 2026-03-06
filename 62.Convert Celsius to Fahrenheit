@@ -1,0 +1,20 @@
+Formula:
+F = (C × 9/5) + 32
+
+Example
+
+Input: 25
+Output: 77°F
+
+--------------------------------------------------------------------------------------------------------
+
+def celsiusToFahrenheit(c):
+    return (c * 9/5) + 32
+
+
+# ===== MAIN PROGRAM =====
+celsius = float(input("Enter temperature in Celsius: "))
+
+fahrenheit = celsiusToFahrenheit(celsius)
+
+print("Temperature in Fahrenheit:", fahrenheit)
