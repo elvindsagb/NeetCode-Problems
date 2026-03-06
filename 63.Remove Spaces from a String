@@ -1,0 +1,21 @@
+Example
+
+Input: Hello World Python
+Output: HelloWorldPython
+
+--------------------------------------------------------------------------
+
+def removeSpaces(s):
+    result = ""
+
+    for char in s:
+        if char != " ":
+            result += char
+
+    return result
+
+
+# ===== MAIN PROGRAM =====
+text = input("Enter a string: ")
+
+print("String without spaces:", removeSpaces(text))
