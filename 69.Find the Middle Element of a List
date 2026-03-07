@@ -1,0 +1,19 @@
+Example
+
+Input: 10 20 30 40 50
+Output: 30
+
+--------------------------------------------------------------------------------------
+
+def middleElement(nums):
+    mid = len(nums) // 2
+    return nums[mid]
+
+
+# ===== MAIN PROGRAM =====
+nums = list(map(int, input("Enter numbers: ").split()))
+
+if nums:
+    print("Middle element:", middleElement(nums))
+else:
+    print("List is empty")
