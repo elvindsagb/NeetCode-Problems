@@ -1,0 +1,19 @@
+Example
+
+Input: 12345
+Output: String contains only digits
+
+
+-------------------------------------------------------------------------------------------------------------
+
+def checkDigits(s):
+    return s.isdigit()
+
+
+# ===== MAIN PROGRAM =====
+text = input("Enter a string: ")
+
+if checkDigits(text):
+    print("String contains only digits")
+else:
+    print("String does not contain only digits")
