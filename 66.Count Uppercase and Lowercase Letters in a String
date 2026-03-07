@@ -1,0 +1,46 @@
+Example
+
+Input: HelloWorld
+Output: Uppercase = 2, Lowercase = 8
+
+----------------------------------------------------------------------------------------------------------------------------
+
+def countCase(s):
+    upper = 0
+    lower = 0
+
+    for char in s:
+        if char.isupper():
+            upper += 1
+        elif char.islower():
+            lower += 1
+
+    return upper, lower
+
+
+# ===== MAIN PROGRAM =====
+text = input("Enter a string: ")
+
+u, l = countCase(text)
+
+print("Uppercase letters:", u)
+print("Lowercase letters:", l)def countCase(s):
+    upper = 0
+    lower = 0
+
+    for char in s:
+        if char.isupper():
+            upper += 1
+        elif char.islower():
+            lower += 1
+
+    return upper, lower
+
+
+# ===== MAIN PROGRAM =====
+text = input("Enter a string: ")
+
+u, l = countCase(text)
+
+print("Uppercase letters:", u)
+print("Lowercase letters:", l)
