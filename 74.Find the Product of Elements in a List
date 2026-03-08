@@ -1,0 +1,20 @@
+Example
+
+Input: 1 2 3 4
+Output: 24
+
+-------------------------------------------------------------------------------------
+
+def productOfList(nums):
+    product = 1
+
+    for num in nums:
+        product *= num
+
+    return product
+
+
+# ===== MAIN PROGRAM =====
+nums = list(map(int, input("Enter numbers: ").split()))
+
+print("Product of elements:", productOfList(nums))
