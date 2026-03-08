@@ -1,0 +1,24 @@
+Example
+
+Input: hello
+Output: hll
+
+-----------------------------------------------------------------------------------------------
+
+def replaceVowels(s):
+    vowels = "aeiouAEIOU"
+    result = ""
+
+    for char in s:
+        if char in vowels:
+            result += "*"
+        else:
+            result += char
+
+    return result
+
+
+# ===== MAIN PROGRAM =====
+text = input("Enter a string: ")
+
+print("Modified string:", replaceVowels(text))
