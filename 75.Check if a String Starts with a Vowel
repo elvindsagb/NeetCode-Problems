@@ -1,0 +1,20 @@
+Example
+
+Input: Apple
+Output: Starts with a vowel
+
+----------------------------------------------------------------------------------------
+
+def startsWithVowel(s):
+    vowels = "aeiouAEIOU"
+    return s[0] in vowels
+
+
+# ===== MAIN PROGRAM =====
+text = input("Enter a string: ")
+
+if startsWithVowel(text):
+    print("String starts with a vowel")
+else:
+    print("String does not start with a vowel")
+
