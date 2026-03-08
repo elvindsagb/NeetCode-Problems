@@ -1,0 +1,19 @@
+Example
+
+Input: 20 5
+Output: 20 is a multiple of 5
+
+---------------------------------------------------------------------------------------
+
+def isMultiple(a, b):
+    return a % b == 0
+
+
+# ===== MAIN PROGRAM =====
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+
+if isMultiple(a, b):
+    print(a, "is a multiple of", b)
+else:
+    print(a, "is not a multiple of", b)
