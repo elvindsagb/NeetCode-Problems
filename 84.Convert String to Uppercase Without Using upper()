@@ -1,0 +1,23 @@
+Example
+
+Input: python
+Output: PYTHON
+
+------------------------------------------------------------------------------------------
+
+def toUpperCase(text):
+    result = ""
+
+    for char in text:
+        if 'a' <= char <= 'z':
+            result += chr(ord(char) - 32)
+        else:
+            result += char
+
+    return result
+
+
+# ===== MAIN PROGRAM =====
+text = input("Enter a string: ")
+
+print("Uppercase:", toUpperCase(text))
