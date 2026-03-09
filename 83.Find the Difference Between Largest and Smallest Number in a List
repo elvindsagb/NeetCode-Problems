@@ -1,0 +1,17 @@
+Example
+
+Input: 5 2 9 1 7
+Output: 8
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+def difference(nums):
+    largest = max(nums)
+    smallest = min(nums)
+    return largest - smallest
+
+
+# ===== MAIN PROGRAM =====
+nums = list(map(int, input("Enter numbers: ").split()))
+
+print("Difference:", difference(nums))
