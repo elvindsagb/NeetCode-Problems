@@ -1,0 +1,23 @@
+Example
+
+Input: 5 8 2 10 3
+Output: Index = 3
+
+--------------------------------------------------------------------
+
+def indexOfLargest(nums):
+    max_value = nums[0]
+    index = 0
+
+    for i in range(len(nums)):
+        if nums[i] > max_value:
+            max_value = nums[i]
+            index = i
+
+    return index
+
+
+# ===== MAIN PROGRAM =====
+nums = list(map(int, input("Enter numbers: ").split()))
+
+print("Index of largest element:", indexOfLargest(nums))
