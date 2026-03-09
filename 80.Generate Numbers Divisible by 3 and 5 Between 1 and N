@@ -1,0 +1,21 @@
+Example
+
+Input: 30
+Output: 15 30
+
+-----------------------------------------------------------------------------------------------------------
+
+def divisibleBy3And5(n):
+    result = []
+
+    for i in range(1, n + 1):
+        if i % 3 == 0 and i % 5 == 0:
+            result.append(i)
+
+    return result
+
+
+# ===== MAIN PROGRAM =====
+n = int(input("Enter a number: "))
+
+print("Numbers divisible by 3 and 5:", divisibleBy3And5(n))
