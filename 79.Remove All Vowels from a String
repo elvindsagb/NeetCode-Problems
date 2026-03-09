@@ -1,0 +1,23 @@
+Example
+
+Input: programming
+Output: prgrmmng
+
+--------------------------------------------------------------------------------------------
+
+
+def removeVowels(s):
+    vowels = "aeiouAEIOU"
+    result = ""
+
+    for char in s:
+        if char not in vowels:
+            result += char
+
+    return result
+
+
+# ===== MAIN PROGRAM =====
+text = input("Enter a string: ")
+
+print("String without vowels:", removeVowels(text))
