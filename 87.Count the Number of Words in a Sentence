@@ -1,0 +1,16 @@
+Example
+
+Input: Python is very powerful
+Output: 4
+
+---------------------------------------------------------------------------------------------------
+
+def countWords(sentence):
+    words = sentence.split()
+    return len(words)
+
+
+# ===== MAIN PROGRAM =====
+text = input("Enter a sentence: ")
+
+print("Number of words:", countWords(text))
