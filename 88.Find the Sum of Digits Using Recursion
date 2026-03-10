@@ -1,0 +1,18 @@
+Example
+
+Input: 1234
+Output: 10
+
+
+---------------------------------------------------------------------------------------------------------------
+
+def sumDigits(n):
+    if n == 0:
+        return 0
+    return (n % 10) + sumDigits(n // 10)
+
+
+# ===== MAIN PROGRAM =====
+num = int(input("Enter a number: "))
+
+print("Sum of digits:", sumDigits(num))
