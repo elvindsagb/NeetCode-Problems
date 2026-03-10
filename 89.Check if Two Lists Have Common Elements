@@ -1,0 +1,23 @@
+Example
+
+Input
+List1: 1 2 3 4
+List2: 5 6 3 7
+
+----------------------------------------------------------------------
+
+def hasCommonElement(list1, list2):
+    for num in list1:
+        if num in list2:
+            return True
+    return False
+
+
+# ===== MAIN PROGRAM =====
+list1 = list(map(int, input("Enter first list: ").split()))
+list2 = list(map(int, input("Enter second list: ").split()))
+
+if hasCommonElement(list1, list2):
+    print("Common element found")
+else:
+    print("No common elements")
