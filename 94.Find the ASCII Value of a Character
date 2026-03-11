@@ -1,0 +1,15 @@
+Example
+
+Input: A
+Output: 65
+
+--------------------------------------------------------------------------
+
+def asciiValue(char):
+    return ord(char)
+
+
+# ===== MAIN PROGRAM =====
+char = input("Enter a character: ")
+
+print("ASCII value:", asciiValue(char))
