@@ -1,0 +1,21 @@
+Example
+
+Input: programming
+Output: progamin
+
+-------------------------------------------------------------------------------------------------------------
+
+def removeDuplicates(s):
+    result = ""
+
+    for char in s:
+        if char not in result:
+            result += char
+
+    return result
+
+
+# ===== MAIN PROGRAM =====
+text = input("Enter a string: ")
+
+print("String without duplicates:", removeDuplicates(text))a
