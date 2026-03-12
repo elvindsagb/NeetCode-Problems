@@ -1,0 +1,18 @@
+Example
+
+Input: HELLO
+Output: String is uppercase
+
+-------------------------------------------------------------------------------------------
+
+def isAllUppercase(s):
+    return s.isupper()
+
+
+# ===== MAIN PROGRAM =====
+text = input("Enter a string: ")
+
+if isAllUppercase(text):
+    print("String is uppercase")
+else:
+    print("String is not uppercase")
