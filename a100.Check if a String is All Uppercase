@@ -13,6 +13,6 @@ def isAllUppercase(s):
 text = input("Enter a string: ")
 
 if isAllUppercase(text):
-    print("String is uppercase")
+    print("String is an uppercase")
 else:
     print("String is not uppercase")
