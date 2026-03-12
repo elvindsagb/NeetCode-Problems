@@ -1,0 +1,23 @@
+Example
+
+Input: 25
+Output: Perfect Square
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+import math
+
+def isPerfectSquare(n):
+    root = int(math.sqrt(n))
+    return root * root == n
+
+
+# ===== MAIN PROGRAM =====
+num = int(input("Enter a number: "))
+
+if isPerfectSquare(num):
+    print("Perfect Square")
+else:
+    print("Not a Perfect Square")
+
