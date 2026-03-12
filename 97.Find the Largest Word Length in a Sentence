@@ -1,0 +1,22 @@
+Example
+
+Input: Python is very powerful
+Output: 9
+
+---------------------------------------------------------------------------------------------------
+
+def largestWordLength(sentence):
+    words = sentence.split()
+    max_length = 0
+
+    for word in words:
+        if len(word) > max_length:
+            max_length = len(word)
+
+    return max_length
+
+
+# ===== MAIN PROGRAM =====
+text = input("Enter a sentence: ")
+
+print("Length of longest word:", largestWordLength(text))
