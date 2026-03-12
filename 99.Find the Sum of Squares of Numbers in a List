@@ -1,0 +1,20 @@
+Example
+
+Input: 1 2 3 4
+Output: 30
+
+-------------------------------------------------------------------------------------------------------
+
+def sumOfSquares(nums):
+    total = 0
+
+    for num in nums:
+        total += num * num
+
+    return total
+
+
+# ===== MAIN PROGRAM =====
+nums = list(map(int, input("Enter numbers: ").split()))
+
+print("Sum of squares:", sumOfSquares(nums))
