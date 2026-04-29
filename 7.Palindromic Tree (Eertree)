@@ -1,0 +1,57 @@
+Concepts: Advanced string DS
+
+---------------------------------------------------------------------------------
+
+class Node:
+    def __init__(self, length):
+        self.length = length
+        self.link = 0
+        self.next = {}
+
+class Eertree:
+    def __init__(self):
+        self.nodes = [Node(-1), Node(0)]
+        self.nodes[0].link = 0
+        self.nodes[1].link = 0
+        self.s = ""
+        self.last = 1
+
+    def add_char(self, ch):
+        self.s += ch
+        pos = len(self.s) - 1
+        curr = self.last
+
+        while True:
+            curlen = self.nodes[curr].length
+            if pos - 1 - curlen >= 0 and self.s[pos - 1 - curlen] == ch:
+                break
+            curr = self.nodes[curr].link
+
+        if ch in self.nodes[curr].next:
+            self.last = self.nodes[curr].next[ch]
+            return
+
+        new_node = Node(self.nodes[curr].length + 2)
+        self.nodes.append(new_node)
+        self.nodes[curr].next[ch] = len(self.nodes) - 1
+
+        if new_node.length == 1:
+            new_node.link = 1
+            self.last = len(self.nodes) - 1
+            return
+
+        while True:
+            curr = self.nodes[curr].link
+            curlen = self.nodes[curr].length
+            if pos - 1 - curlen >= 0 and self.s[pos - 1 - curlen] == ch:
+                new_node.link = self.nodes[curr].next[ch]
+                break
+
+        self.last = len(self.nodes) - 1
+
+
+tree = Eertree()
+for ch in "ababa":
+    tree.add_char(ch)
+
+print("Total palindromes:", len(tree.nodes) - 2)
