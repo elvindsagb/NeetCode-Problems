@@ -1,0 +1,37 @@
+Concepts: Trees + Segment Trees + Decomposition
+
+------------------------------------------------------------------------
+
+class HLD:
+    def __init__(self, graph, values):
+        self.n = len(graph)
+        self.graph = graph
+        self.values = values
+        self.parent = [-1]*self.n
+        self.depth = [0]*self.n
+        self.size = [0]*self.n
+        self.heavy = [-1]*self.n
+
+        self.dfs(0)
+        print("Heavy child array:", self.heavy)
+
+    def dfs(self, v):
+        self.size[v] = 1
+        max_size = 0
+
+        for u in self.graph[v]:
+            if u != self.parent[v]:
+                self.parent[u] = v
+                self.depth[u] = self.depth[v] + 1
+                self.dfs(u)
+                self.size[v] += self.size[u]
+
+                if self.size[u] > max_size:
+                    max_size = self.size[u]
+                    self.heavy[v] = u
+
+
+graph = [[1,2],[0,3,4],[0],[1],[1]]
+values = [1,2,3,4,5]
+
+hld = HLD(graph, values)
