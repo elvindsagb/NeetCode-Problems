@@ -1,0 +1,36 @@
+Concepts: Graph + Bitmask + Branch & Bound
+
+--------------------------------------------------------------------------------------------------
+
+def max_independent_set(graph):
+    n = len(graph)
+    best = 0
+
+    def backtrack(node, chosen, excluded):
+        nonlocal best
+
+        if node == n:
+            best = max(best, len(chosen))
+            return
+
+        if len(chosen) + (n - node) <= best:
+            return
+
+        if node not in excluded:
+            new_excluded = excluded.copy()
+            new_excluded.update(graph[node])
+            backtrack(node + 1, chosen + [node], new_excluded)
+
+        backtrack(node + 1, chosen, excluded)
+
+    backtrack(0, [], set())
+    return best
+
+
+graph = {
+    0: [1,2],
+    1: [0,3],
+    2: [0,3],
+    3: [1,2]
+}
+print(max_independent_set(graph))
