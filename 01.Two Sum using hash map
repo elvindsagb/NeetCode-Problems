@@ -8,7 +8,7 @@ Output: [0,1]
 PROGRAM
 
 def twoSum(nums, target):
-    num_map = {}
+    num_map = {}, 
 
     for i, num in enumerate(nums):
         complement = target - num
